@@ -1,3 +1,5 @@
+import toNumber from "../toNumber"
+
 /**
  * The base implementation of `sum` and `sumBy`.
  *
@@ -15,7 +17,7 @@ function baseSum(array, iteratee) {
       result = result === undefined ? current : (result + current)
     }
   }
-  return result
+  return toNumber(result)
 }
 
 export default baseSum
